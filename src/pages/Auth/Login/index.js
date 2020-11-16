@@ -24,14 +24,12 @@ export default function Login() {
 
       api.post("/funcionario/validateFunc.php", formData)
       .then((res) => {
-         debugger
          dispatch({ type: "SET_USER", user: JSON.parse(res.data.slice(176)) })
          toast.success("Logado com sucesso");
          history.push("/inicio");
       }) 
       .catch((err) => {
-         console.log(err)
-         debugger
+         toast.error("Ocorreu algum erro, tente novamente!");
       })
    }
 

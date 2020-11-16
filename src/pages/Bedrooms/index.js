@@ -20,6 +20,7 @@ import api from "~/services/api";
 
 export default function Bedrooms() {
    const dispatch = useDispatch();
+   const hotelReducer = useSelector((state) => state.hotelReducer);
    const userReducer = useSelector((state) => state.userReducer);
 
    const [tipo, setTipo] = useState(null);
@@ -28,41 +29,36 @@ export default function Bedrooms() {
 
    function getQuartoInfo() {
       let formData = new FormData();
-      // formData.append('id', userReducer.user.id);
-      formData.append('id', 1);
+      formData.append('id', parseInt(hotelReducer.hotel.qtdeQuartos));
 
       api.post("/quarto/getQuarto.php", formData)
       .then((res) => {
-         debugger
          setTipo(res.data.quarto.tipo);
          setDiaria(res.data.quarto.valorDiaria);
       })
       .catch((err) => {
-         debugger
+         toast.error("Ocorreu um erro com o servidor")
       })
    }
 
    function addQuarto() {
       let formData = new FormData();
-      // formData.append('id', userReducer.user.id);
-      formData.append('hotel', 1);
-      formData.append('tipo', 1);
-      formData.append('valorDiaria', 1);
+      formData.append('hotel', hotelReducer.hotel.id);
+      formData.append('tipo', tipo);
+      formData.append('valorDiaria', diaria);
 
       api.post("/quarto/includeQuarto.php", formData)
       .then((res) => {
-         debugger
          toast.success("Quarto adicionado com sucesso")
       })
       .catch((err) => {
-         debugger
+         toast.error("Ocorreu um erro com o servidor")
       })
    }
 
    function addLucro() {
       let formData = new FormData();
-      // formData.append('id', userReducer.user.id);
-      formData.append('id', 1);
+      formData.append('id', parseInt(hotelReducer.hotel.qtdeQuartos));
       formData.append('value', lucro);
 
       api.post("/quarto/includeLucro.php", formData)
@@ -70,7 +66,7 @@ export default function Bedrooms() {
          toast.success(res.data.message)
       })
       .catch((err) => {
-         debugger
+         toast.error("Ocorreu um erro com o servidor")
       })
    }
 
@@ -113,7 +109,7 @@ export default function Bedrooms() {
             </div>
             <div>
                <Title>
-                  <h3>Cadastrar quarto</h3>
+                  <h3>Cadastrar um quarto novo</h3>
                </Title>
                <ContainerCards>
                   <TextField
@@ -137,7 +133,7 @@ export default function Bedrooms() {
                </ContainerCards>
 
                <Title>
-                  <h3>Incluir lucro</h3>
+                  <h3>Incluir lucro ao último quarto</h3>
                </Title>
                <ContainerCards>
                   <TextField
@@ -146,6 +142,7 @@ export default function Bedrooms() {
                      variant="outlined"
                      style={{ marginBottom: "1.5rem" }}
                      onChange={(e) => setLucro(e.target.value)}
+                     value={lucro}
                   />
                   <ButtonCalc onClick={() => addLucro()}>
                      <AddIcon />

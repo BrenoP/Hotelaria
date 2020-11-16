@@ -18,8 +18,8 @@ import Header from "~/components/layout/Header";
 import api from "~/services/api";
 
 export default function Profile() {
-   const dispatch = useDispatch();
    const userReducer = useSelector((state) => state.userReducer);
+   const hotelReducer = useSelector((state) => state.hotelReducer);
 
    const [user, setUser] = useState(null);
    const [userComission, setUserComission] = useState(null);
@@ -27,35 +27,31 @@ export default function Profile() {
 
    function getUserInfo() {
       let formData = new FormData();
-      // formData.append('id', userReducer.user.id);
-      formData.append('id', 1);
+      formData.append('id', userReducer.user.id);
 
       api.post("/funcionario/getInfoFunc.php", formData)
       .then((res) => {
-         debugger
          let userResponse = JSON.parse(res.data.slice(176));
          setUser(userResponse);
          setUserComission(userResponse.comission);
       })
       .catch((err) => {
-         debugger
+         toast.error("Ocorreu um erro com o servidor")
       })
    }
 
    function addComission() {
       let formData = new FormData();
-      // formData.append('id', userReducer.user.id);
-      formData.append('id', 1);
+      formData.append('id', userReducer.user.id);
       formData.append('value', comission);
-      formData.append('hotel_id', 1);
+      formData.append('hotel_id', hotelReducer.hotel.id);
 
       api.post("/funcionario/InsertComissionFunc.php", formData)
       .then((res) => {
-         debugger
          setUserComission(JSON.parse(res.data.slice(176)));
       })
       .catch((err) => {
-         debugger
+         toast.error("Ocorreu um erro com o servidor")
       })
    }
 
