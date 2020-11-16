@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import PersonIcon from '@material-ui/icons/Person';
 import HotelIcon from '@material-ui/icons/Hotel';

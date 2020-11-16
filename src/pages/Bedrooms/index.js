@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import AddIcon from "@material-ui/icons/Add";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import HotelIcon from '@material-ui/icons/Hotel';
 import { toast } from 'react-toastify';
 
@@ -11,17 +11,13 @@ import {
    ButtonCalc,
    GridUserInfo,
    BedroomContainer,
-   ContainerCalcs,
-   CardCalc
 } from "./styles";
 
 import Header from "~/components/layout/Header";
 import api from "~/services/api";
 
 export default function Bedrooms() {
-   const dispatch = useDispatch();
    const hotelReducer = useSelector((state) => state.hotelReducer);
-   const userReducer = useSelector((state) => state.userReducer);
 
    const [tipo, setTipo] = useState(null);
    const [diaria, setDiaria] = useState(null);
