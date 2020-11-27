@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dadce003018fa84cb3043f5623be4d92",
+    "revision": "ff3baabf9baae579efd110b17d64e546",
     "url": "/Hotelaria/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Hotelaria/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "545c3f6b651a1f3b596b",
+    "revision": "241c9ce6fa18a5fe2e69",
     "url": "/Hotelaria/static/css/main.d3fb6868.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Hotelaria/static/js/2.1157b1e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "545c3f6b651a1f3b596b",
-    "url": "/Hotelaria/static/js/main.8f144d0e.chunk.js"
+    "revision": "241c9ce6fa18a5fe2e69",
+    "url": "/Hotelaria/static/js/main.e57b3a88.chunk.js"
   },
   {
     "revision": "e9623cef25cc2ec3df88",

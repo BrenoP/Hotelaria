@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Hotelaria/static/css/main.d3fb6868.chunk.css",
-    "main.js": "/Hotelaria/static/js/main.8f144d0e.chunk.js",
-    "main.js.map": "/Hotelaria/static/js/main.8f144d0e.chunk.js.map",
+    "main.js": "/Hotelaria/static/js/main.e57b3a88.chunk.js",
+    "main.js.map": "/Hotelaria/static/js/main.e57b3a88.chunk.js.map",
     "runtime-main.js": "/Hotelaria/static/js/runtime-main.b5caa70d.js",
     "runtime-main.js.map": "/Hotelaria/static/js/runtime-main.b5caa70d.js.map",
     "static/css/2.d34346ea.chunk.css": "/Hotelaria/static/css/2.d34346ea.chunk.css",
     "static/js/2.1157b1e8.chunk.js": "/Hotelaria/static/js/2.1157b1e8.chunk.js",
     "static/js/2.1157b1e8.chunk.js.map": "/Hotelaria/static/js/2.1157b1e8.chunk.js.map",
     "index.html": "/Hotelaria/index.html",
-    "precache-manifest.069de2f70592e9e9c0a975a80a409989.js": "/Hotelaria/precache-manifest.069de2f70592e9e9c0a975a80a409989.js",
+    "precache-manifest.c50906f0a2022b29a80549f0ed78b3b5.js": "/Hotelaria/precache-manifest.c50906f0a2022b29a80549f0ed78b3b5.js",
     "service-worker.js": "/Hotelaria/service-worker.js",
     "static/css/2.d34346ea.chunk.css.map": "/Hotelaria/static/css/2.d34346ea.chunk.css.map",
     "static/css/main.d3fb6868.chunk.css.map": "/Hotelaria/static/css/main.d3fb6868.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.1157b1e8.chunk.js",
     "static/css/main.d3fb6868.chunk.css",
-    "static/js/main.8f144d0e.chunk.js"
+    "static/js/main.e57b3a88.chunk.js"
   ]
 }
